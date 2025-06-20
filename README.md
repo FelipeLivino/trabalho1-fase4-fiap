@@ -8,7 +8,7 @@
 
 # Nome do projeto
 
-FarmTech Solutions - utomação e inteligência na FarmTech Solutions
+FarmTech Solutions - Automação e inteligência na FarmTech Solutions
 
 ## Nome do grupo
 
