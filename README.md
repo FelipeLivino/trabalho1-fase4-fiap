@@ -186,6 +186,9 @@ Por fim, Este projeto simula e exibe dados de sensores em tempo real. Ele é com
 - É possível:
   - Ver os dados dos sensores em tempo real.
   - Aplicar filtros e analisar diferentes métricas.
+   
+  ## 📊 4. Notebook de treinamento
+  - A análise dos dados / treinamento do modelo / validação e esportação dos modelos está na pasta `model`
 
 ## 🔄 Fluxo de Dados
 
@@ -195,20 +198,25 @@ Por fim, Este projeto simula e exibe dados de sensores em tempo real. Ele é com
 
 ```
 trabalho1-fase3-fiap/
-├── assets/                      # Pasta para imagens e arquivos de mídia
+├── assets/                                # Pasta para imagens e arquivos de mídia
+│
+├── model/
+│   └── analise_sensores_completa.ipynb    # Notebook: Notebook jupyter com a analise completa e modelagem
+│   └── dados_treinamento.zip              # Dados e modelos de treinamento: Para conseguir subir o arquivo, zipamos os dados e os modelos de treinamento
+│   └── pre_process_data.ipynb             # Notebook: Notebook jupyter com a análise inicial do processamento dos dados
 │
 ├── simulator/
-│   └── simulator.py             # Simulador: cria os sensores e gera valores continuos para abastecer o banco de dados
+│   └── simulator.py                       # Simulador: cria os sensores e gera valores continuos para abastecer o banco de dados
 │
-├── src/                         # Código da API FastAPI
-│   ├── models.py                # API para gerenciar duas entidades principais: sensores e leituras.
-│   └── schemas.py               # Esquemas (Pydantic) para validação dos dados
+├── src/                                   # Código da API FastAPI
+│   ├── models.py                          # API para gerenciar duas entidades principais: sensores e leituras.
+│   └── schemas.py                         # Esquemas (Pydantic) para validação dos dados
 │
-├── wokwi/                       # Arquivos do simulador Wokwi (ESP32)
-│   ├── diagram.json             # Diagrama do circuito
-│   ├── libraries.txt            # Bibliotecas necessárias
-│   ├── sketch.ino               # Código da simulação (Arduino)
-│   └── wokwi-project.txt        # Configuração do projeto Wokwi
+├── wokwi/                                 # Arquivos do simulador Wokwi (ESP32)
+│   ├── diagram.json                       # Diagrama do circuito
+│   ├── libraries.txt                      # Bibliotecas necessárias
+│   ├── sketch.ino                         # Código da simulação (Arduino)
+│   └── wokwi-project.txt                  # Configuração do projeto Wokwi
 │
 ├── .gitignore                   # Arquivos e pastas ignorados pelo Git
 ├── Makefile                     # Comandos utilitários para automatizar tarefas
