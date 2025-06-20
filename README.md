@@ -45,6 +45,10 @@ As leituras coletadas são persistidas em um banco de dados, que registra o sens
 
 Por fim, Este projeto simula e exibe dados de sensores em tempo real. Ele é composto por uma API desenvolvida com FastAPI, que gerencia sensores e leituras armazenadas em um banco SQLite. Um simulador cria automaticamente os sensores (caso não existam) e envia leituras continuamente. Para a visualização, foi criado um dashboard em Streamlit que exibe os dados em tempo real de forma simples e interativa.
 
+## Vídeo Demonstrativo no YouTube
+
+[Assista ao vídeo no YouTube](https://youtu.be/A9O71L3Uft4)
+
 ## 🔌 1. Simulador de Circuito – Wokwi (ESP32)
 
 - **Conecta-se ao WiFi** automaticamente (`Wokwi-GUEST`).
