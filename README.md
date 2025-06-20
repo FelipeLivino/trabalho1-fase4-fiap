@@ -8,7 +8,7 @@
 
 # Nome do projeto
 
-Previsão de Falhas em Equipamentos Industriais com Sensores e IA
+FarmTech Solutions - utomação e inteligência na FarmTech Solutions
 
 ## Nome do grupo
 
@@ -41,7 +41,7 @@ Os dados coletados pelo sensor são enviados via HTTP POST em formato JSON para 
 
 Para suportar esse fluxo, uma API desenvolvida em FastAPI recebe e armazena as leituras dos sensores, disponibilizando-as para consulta. Um módulo simula a geração periódica de dados sintéticos, replicando as medições reais, enviando-os automaticamente para a API.
 
-As leituras coletadas são persistidas em um banco de dados, que registra o sensor, tipo de variável, valor e timestamp da coleta.
+As leituras coletadas são persistidas em um banco de dados, que registra o sensor, tipo de variável, valor, predição e timestamp da coleta.
 
 Por fim, Este projeto simula e exibe dados de sensores em tempo real. Ele é composto por uma API desenvolvida com FastAPI, que gerencia sensores e leituras armazenadas em um banco SQLite. Um simulador cria automaticamente os sensores (caso não existam) e envia leituras continuamente. Para a visualização, foi criado um dashboard em Streamlit que exibe os dados em tempo real de forma simples e interativa.
 
@@ -149,11 +149,19 @@ Por fim, Este projeto simula e exibe dados de sensores em tempo real. Ele é com
 
 **API REST** (`main.py`)
 
-- **POST /readings:** armazena nova leitura.
-- **GET /readings:** lista todas as leituras.
-- **PUT /readings/<id>:** atualiza leitura.
-- **DELETE /readings/<id>:** remove leitura.
-
+- **POST /sensores:** armazena novo sensor.
+- **GET /sensores:** lista todas os sensores.
+- **PUT /sensores/<id>:** atualiza sensor.
+- **DELETE /sensores/<id>:** remove sensor.
+- **POST /leituras:** armazena nova leitura.
+- **GET /leituras:** lista todas as leituras.
+- **GET /leituras/<id>:** lista todas as leituras de determinado sensor.
+- **PUT /leituras/<id>:** atualiza leitura.
+- **DELETE /leituras/<id>:** remove leitura.
+- **GET /israinning:** retornar as informações de metereologia do open-meteo.
+- **POST /predict:** Faz a predição de acordo com os dados do sensor.
+- **GET /predicts:** Retorna os resultados das predições
+- 
 - A API está implementada no arquivo `main.py`, e utiliza os arquivos `models.py` e `schemas.py` (dentro da pasta `src/`) para estruturar os dados e validações.
 - Ela gerencia duas entidades principais:
   - **Sensores**: identificados por nome, tipo e local.
